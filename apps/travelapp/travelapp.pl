@@ -23,15 +23,15 @@ sandbox:safe_primitive(travelapp:remove_list(_,_)).
 sandbox:safe_primitive(travelapp:add_activity(_,_,_,_)).
 sandbox:safe_primitive(travelapp:remove_activity(_,_,_,_)).
 
-?- rdf_load('C:/Users/sara/Desktop/Diplomski/croatia_travel.owl').
+path(X) :- absolute_file_name('croatia_travel.owl', X, [mode(read)]).
+
+?- path(X), rdf_load(X).
 ?- rdf_register_prefix(t,'http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#').
 ?- rdf_register_prefix(schema,'http://schema.org/').
-
 
 get_city_img(City, Image):- rdf(Name, rdf:type, t:'City'), 
 						rdf(Name, rdfs:label, literal(type('http://www.w3.org/2001/XMLSchema#string',City))),
 						rdf(Name, schema:image, Image).
-
 						
 get_activity_type(ActivityName, TypeName, CityName, Image, Review, Price):- (rdf(Type, rdfs:subClassOf, t:'Activity');
 						rdf(Type, rdfs:subClassOf, t:'Accommodation')),

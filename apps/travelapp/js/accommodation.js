@@ -74,8 +74,8 @@ function ask(query){
         ask: query,
         destroy: false,
         onsuccess: function() {
-            jsonString = JSON.stringify(this.data);
-            writeln(jsonString);
+            //jsonString = JSON.stringify(this.data);
+            //writeln(jsonString);
             if(!adding && query.startsWith("get_hotel_info")){
                 showResults2(this.data);
             }

@@ -65,8 +65,8 @@ function ask(query){
         ask: query,
         destroy: false,
         onsuccess: function() {
-            jsonString = JSON.stringify(this.data);
-            writeln(jsonString);
+            //jsonString = JSON.stringify(this.data);
+            //writeln(jsonString);
             if(!adding && (query.startsWith("get_bar_restaurant_info") || query.startsWith("get_activity_info"))){
                 showResults(this.data);
             }
