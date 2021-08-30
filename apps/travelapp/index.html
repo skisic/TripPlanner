@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">   
+    <head>
+        <title>Trip Planner</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="Chrome">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/travelapp.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="./assets/images/header_icon_plain.ico">
+    </head>
+    <body>
+        <div class="container">
+            <div class="container-item">
+                <webName>Trip<span class="webName2">Planner</span></webName>
+                <!-- Navigation -->
+                <nav>
+                    <a class="active" href="./index.html">Home</a>
+                    <a href="./login.html">Sign in</a>
+                    <a class="register" href="./register.html">Sign up</a>
+                    <a href="./mytrips.html">My Trips</a>
+                    <a id="signOut" href="">Sign out</a>
+                </nav>
+                <!-- Search cities -->
+                <div id="landingPageText">
+                    <pageHeading>Explore</br><span class="bigHeading">CROATIA</span></pageHeading>
+                    <p>From beautiful scenery, crystal clear waters and incredible beaches to the homegrown
+                        wine and unforgettable culture, Croatia is a must - visit for everyone! </br>
+                        <b>Choose a city</b> and <b>quickly plan your next trip!</b> </p>
+                    <div class="searchWrapper">
+                    <input id="search" type="text" placeholder="Search cities, e.g. Varazdin">
+                    <button id="searchBtn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                        </svg>
+                     </button>
+                    </div>
+                </div>
+                <!-- Popular destinations -->
+                <div id="popularDestinations">
+                    <h4>Popular destinations</h4>
+                    <div class="destination">
+                        <div class="img"></div>
+                    </div>
+                    <div class="destination">
+                        <div class="img"></div>
+                    </div>
+                    <div class="destination">
+                        <div class="img"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-item"></div>
+            <div class="break"></div>
+        </div>
+            <div class="container2">
+                <!-- Search results -->
+                <h2 id="cityName"></h2>    
+                <div id="results">
+                    <div id="accommodation">
+                        <h3>Accommodation</h3>
+                        <p class="subheading">Find a perfect place to stay while travelling.</p>
+                    </div>
+                    <!--<button id="accBtn" onclick="showMore()">Load More...</button>-->
+                    <div id="bar_restaurant">
+                        <h3>Bars & Restaurants</h3>
+                        <p class="subheading">Whether you want a quick drink or a traditional lunch, we know a place.</p>
+                    </div>
+                    <div id="landmark_museum_other">
+                        <h3>Landmarks, Museums & Other</h3>
+                        <p class="subheading">Check out all the signature landmarks and find fun stuff to do.</p>
+                    </div>
+                    <div id="tour_cruise">
+                        <h3>Tours & Cruises</h3>
+                        <p class="subheading">Explore every bit of the city with guided tours and cruises.</p>
+                    </div>
+                    <div id="sports_activities">
+                        <h3>Sports & Activities</h3>
+                        <p class="subheading">Suggestions for an active vacation.</p>
+                    </div>
+                    <div id="beach">
+                        <h3>Beaches</h3>
+                        <p class="subheading">Check out all the beautiful beaches to chill for hours.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="popup">
+                <div class="popup-content">
+                    <div class="popup_form">
+                        <h3>Add a new trip</h3>
+                        <div class="form">
+                            <input type="text" class="form_input" id='listName' name="listName" placeholder=" " autocomplete="off" required />
+                            <label for="listName" class="form_label">List name</label>
+                        </div>
+                        <button id="addList">Add</button><button id="cancel" class="cancel">Cancel</button>
+                    </div>
+                </div>
+                </div>
+
+                <div class="popup">
+                    <div class="popup-content">
+                        <div class="popup_form">
+                            <h3>Choose a trip</h3>
+                            <div class="form">
+                                <select name="tripList" id="tripList"></select>
+                            </div>
+                            <button id="addActivity">Add to trip</button><button id="cancel2" class="cancel">Cancel</button>
+                        </div>
+                    </div>
+                    </div>
+            <div id="results"></div>
+        <script src="/vendor/jquery/jquery-2.0.3.min.js"></script>
+        <script src="/pengine/pengines.js"></script>
+        <script src="js/travel.js"></script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+created(1629878005.72186).
+assert(user(sara,sara123,regular)).
+assert(user(ads,ads,regular)).
+assert(user(sara1,sara1,regular)).
+assert(user(sara12,sara12,regular)).
+assert(user_list(sara,test3)).
+assert(user_list(sara,sar)).
+assert(user_list(sara,'saras list')).
+assert(user_list(sara,new)).
+assert(user_list(sara,asd)).
+assert(user_list(sara,hihi)).
+retract(user_list(sara,asd)).
+retract(user_list(sara,sar)).
+retract(user_list(sara,hihi)).
+retract(user_list(sara,new)).
+retract(user_list(sara,'saras list')).
+assert(user_list(sara,'Sarino putovanje')).
+assert(user_list(sara,'')).
+retract(user_list(sara,'')).
+assert(trip_activity(sara,test,undefined,'Hotel Istra')).
+assert(trip_activity(sara,test,undefined,'Park Boutique Hotel')).
+assert(trip_activity(sara,test,'Varazdin','Santa Maria')).
+retract(user_list(sara,test3)).
+retract(trip_activity(sara,test,'Varazdin','My Way')).
+retract(trip_activity(sara,test,'Varazdin','Santa Maria')).
+assert(trip_activity(sara,test,'Varazdin','Pansion Maltar')).
+assert(trip_activity(sara,test,'Varazdin','Old Town Castle')).
+assert(trip_activity(sara,test,'Varazdin','Santa Maria')).
+retract(user_list(sara,test)).
+assert(user_list(sara,test)).
+retract(user_list(sara,test)).
+assert(user_list(sara,test)).
+assert(trip_activity(sara,test2,'Varazdin','Park Boutique Hotel')).
+assert(trip_activity(sara,test2,'Varazdin','My Way')).
+assert(trip_activity(sara,test2,'Varazdin','Old Town Castle')).
+assert(trip_activity(sara,test2,'Varazdin','Santa Maria')).
+assert(trip_activity(sara,'Sarino putovanje','Varazdin','B&B Arbia Dorka')).
+assert(user(test,test1,regular)).
+assert(user_list(test,test22)).
+retract(user_list(test,test22)).
+assert(user_list(test,test1)).
+retract(user_list(test,test1)).
+assert(user_list(test,test11)).
+retract(user_list(test,test11)).
+assert(user_list(test,sass)).
+assert(trip_activity(test,sass,'Varazdin','B&B Arbia Dorka')).
+assert(trip_activity(test,sass,'Varazdin','Hotel Istra')).
+assert(trip_activity(test,sass,'Varazdin','Park Boutique Hotel')).
+assert(trip_activity(test,sass,'Varazdin','Hotel Varazdin')).
+assert(trip_activity(test,sass,'Varazdin','Old Town Castle')).
+assert(trip_activity(test,sass,'Varazdin','My Way')).
+assert(trip_activity(test,sass,'Varazdin','Pansion Maltar')).
+assert(trip_activity(test,sass,'Varazdin','Hotel Turist')).
+retract(trip_activity(test,sass,'Varazdin','Hotel Istra')).
+retract(trip_activity(test,sass,'Varazdin','Hotel Varazdin')).
+retract(trip_activity(test,sass,'Varazdin','Old Town Castle')).
+retract(trip_activity(test,sass,'Varazdin','My Way')).
+retract(trip_activity(test,sass,'Varazdin','Pansion Maltar')).
+retract(trip_activity(test,sass,'Varazdin','Hotel Turist')).
+retract(trip_activity(test,sass,'Varazdin','Park Boutique Hotel')).
+assert(trip_activity(test,sass,'Varazdin','Pansion Maltar')).
+retract(trip_activity(test,sass,'Varazdin','Pansion Maltar')).
+assert(trip_activity(test,sass,'Varazdin','My Way')).
+assert(trip_activity(test,sass,'Varazdin','Pansion Maltar')).
+assert(trip_activity(test,sass,'Varazdin','Hotel Istra')).
+assert(trip_activity(test,sass,'Varazdin','Santa Maria')).
+retract(trip_activity(test,sass,'Varazdin','Santa Maria')).
+retract(trip_activity(test,sass,'Varazdin','Hotel Istra')).
+retract(trip_activity(test,sass,'Varazdin','Pansion Maltar')).
+retract(trip_activity(test,sass,'Varazdin','My Way')).
+retract(user_list(test,sass)).
+assert(user_list(test,novaLista)).
+assert(trip_activity(test,novaLista,'Varazdin','Hotel Varazdin')).
+retract(trip_activity(test,novaLista,'Varazdin','Hotel Varazdin')).
+assert(trip_activity(test,novaLista,'Varazdin',undefined)).
+assert(trip_activity(test,novaLista,'Varazdin','B&B Arbia Dorka')).
+assert(trip_activity(test,novaLista,'Varazdin','Hotel Istra')).
+assert(trip_activity(test,novaLista,'Varazdin','Park Boutique Hotel')).
+retract(trip_activity(test,novaLista,'Varazdin','Park Boutique Hotel')).
+assert(trip_activity(test,novaLista,'Varazdin','Park Boutique Hotel')).
+assert(trip_activity(test,novaLista,'Varazdin','Pansion Maltar')).
+assert(trip_activity(test,novaLista,'Varazdin','Santa Maria')).
+assert(trip_activity(test,novaLista,'Varazdin','My Way')).
+assert(trip_activity(test,novaLista,'Dubrovnik','Royal Blue Hotel')).
+assert(trip_activity(test,novaLista,'Dubrovnik','Hotel Dubrovnik Palace')).
+retract(trip_activity(test,novaLista,'Varazdin','Pansion Maltar')).
+retract(trip_activity(test,novaLista,'Varazdin','Santa Maria')).
+retract(user_list(sara,test)).
+retract(user_list(sara,'Sarino putovanje')).
+retract(user_list(sara,test2)).
+assert(user_list(sara,'Varazdin trip')).

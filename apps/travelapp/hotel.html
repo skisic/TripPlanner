@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="Chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/travelapp_2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Trip Planner</title>
+</head>
+<body>
+    <div class="container">
+    <div class="container-item">
+        <webName>Trip<span class="webName2">Planner</span></webName>
+        <!--Search box
+        <div class="searchWrapper">
+            <input type="submit" value="" class="search-submit">
+            <input type="search" name="q" class="search-text" placeholder="Search..." autocomplete="off">
+        </div>
+        -->
+        <!-- Navigation -->
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./login.html">Sign in</a>
+            <a class="register" href="./register.html">Sign up</a>
+            <a href="./mytrips.html">My trips</a>
+            <a id="signOut" href="">Sign out</a>
+        </nav>
+        </div>
+    <div class="break"></div>
+    <div class="container-item">
+        <!--City info-->
+        <h3 id="location-type">City - Type</h3>
+        <h2 id="activityName">Name of Hotel</h2>
+        <button id="addBtn"></button><br>
+        <img id="activityImg" src="" alt="" width="700" height="466">
+        <div id="descInfo">
+            <h4>Description</h4>
+            <p id="description"></p>
+        </div>
+    </div>
+    <div class="container-item">
+    <div id="info">
+        <div id=review></div>
+        <div id=price></div>
+        <h4>Info:</h4>
+        <div class="info"><img src="./assets/images/location.svg" width="18px" height="18 px"/><p id="address"></p></div>
+        <div class="info"><img src="./assets/images/phone.svg" width="18px" height="18 px"/><p id="phone"></p></div>
+        <div class="info"><img src="./assets/images/website.svg" width="18px" height="18 px"/><p id="website"></p></div>
+    </div>
+    </div>
+    <div class="container-item">
+        <h4>Amenities</h4>
+        <p>* for more info check out hotel's website</p>
+        <div id="amenities">
+        <div id="amenityInternet">
+            <h5>Internet</h5>
+        </div>
+        <div id="amenityPolicy">
+            <h5>Policies & Payments</h5>
+        </div>
+        <div id="amenityServices">
+            <h5>Services</h5>
+        </div>
+        <div id="amenityPool">
+            <h5>Pool</h5>
+        </div>
+        <div id="amenityActivities">
+            <h5>Activities</h5>
+        </div>
+        <div id="amenityAccessibility">
+            <h5>Accessibility</h5>
+        </div>
+        <div id="amenityBusiness">
+            <h5>Business & Events</h5>
+        </div>
+        <div id="amenityRooms">
+            <h5>Rooms</h5>
+        </div>
+        <div id="amenityFood">
+            <h5>Food & Drink</h5>
+        </div>
+        <div id="amenityChildren">
+            <h5>Children</h5>
+        </div>
+        <div id="amenityParking">
+            <h5>Parking & Transport</h5>
+        </div>
+        <div id="amenityWellness">
+            <h5>Wellness</h5>
+        </div>
+        <div id="amenityPets">
+            <h5>Pets</h5>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div id="results"></div>
+
+    <div class="popup">
+        <div class="popup-content">
+            <div class="popup_form">
+                <h3>Add a new trip</h3>
+                <div class="form">
+                    <input type="text" class="form_input" id='listName' name="listName" placeholder=" " autocomplete="off" required />
+                    <label for="listName" class="form_label">List name</label>
+                </div>
+                <button id="addList">Add</button><button id="cancel" class="cancel">Cancel</button>
+            </div>
+        </div>
+        </div>
+
+        <div class="popup">
+            <div class="popup-content">
+                <div class="popup_form">
+                    <h3>Choose a trip</h3>
+                    <div class="form">
+                        <select name="tripList" id="tripList"></select>
+                    </div>
+                    <button id="addActivity">Add to trip</button><button id="cancel2" class="cancel">Cancel</button>
+                </div>
+            </div>
+            </div>
+
+    <script src="/vendor/jquery/jquery-2.0.3.min.js"></script>
+    <script src="/pengine/pengines.js"></script>
+    <script src="js/accommodation.js"></script>
+</body>
+</html>

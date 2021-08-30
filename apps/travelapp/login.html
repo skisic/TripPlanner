@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/travelapp_3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Trip Planner</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-item">
+            <webName>Trip<span class="webName2">Planner</span></webName>
+            <!-- Navigation -->
+            <nav>
+                <a href="./index.html">Home</a>
+                <a class="active" href="./login.html">Sign in</a>
+                <a class="register" href="./register.html">Sign up</a>
+            </nav>
+        </div>
+    </div>
+    <div class="bg_image">
+        <div class="login_form">
+            <h3>Sign in</h3>
+            <div class="form">
+                <input type="text" class="form_input" id='username' name="username" placeholder=" " autocomplete="off" required />
+                <label for="username" class="form_label">Username</label>
+            </div>
+            <div class="form">
+                <input type="text" class="form_input" id='password' name="password" placeholder=" " autocomplete="off" required />
+                <label for="password" class="form_label">Password</label>
+            </div>
+            <p id="login_message"></p>
+            <button id="signin">Sign in</button>
+            <p>Don't have an account? <a href="./register.html">Register now</a>!</p>
+           
+        </div>
+    </div>
+    <script src="/vendor/jquery/jquery-2.0.3.min.js"></script>
+    <script src="/pengine/pengines.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

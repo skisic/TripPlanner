@@ -1,0 +1,235 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    color: #0A152B;
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+}
+
+
+h2 {
+    color: #123C64;
+    font-weight: 700;
+    font-size: 32px;
+    margin-top: 0.5em;
+}
+
+h3 {
+    color: #123C64;
+    font-weight: 700;
+    font-size: 25px;
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+}
+
+h4 {
+    color: #123C64;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 0.2em;
+}
+
+h5 {
+    color: #0A152B;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+}
+
+nav {
+    color: #123C64;
+    margin-left: auto;
+}
+
+nav a{
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #123C64;
+}
+
+nav a:hover {
+    color: #57CAE9;
+    text-decoration: none;
+}
+
+.active {
+    font-weight: 700;
+}
+
+webName {
+    font-size: 32px;
+    color: #123C64;
+    font-weight: 700;
+}
+
+.webName2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FEB55B;
+}
+
+.container {
+    display: flex;
+    padding-left:10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%; 
+}
+
+.break{
+    flex-basis: 100%;
+    width: 0;
+  }
+
+.container-item:nth-child(1) {
+    flex: 1;
+    margin-top: 3%;
+    width: 700px;
+    margin-bottom: 3%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.bg_image{
+    height:84.4vh;
+    background-image: url(../assets/images/login_page.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg_image_2{
+    height:84.4vh;
+    background-image: url(../assets/images/register_img.jpg);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form{
+    background-color: #fff;
+    width: 30%;
+    height: 60%;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.form {
+    position: relative;
+    padding-bottom: 25px;
+}
+.form_input {
+    width: 60%;
+    height: 40px;
+    border: 2px solid #123C64;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background:none;
+}
+
+.form_input:hover,:focus{
+    border-color: #57CAE9;
+    outline: none;
+}
+
+.form_label {
+    position: absolute;
+    left: 7rem;
+    top: 0.8rem;
+    font-size: 16px;
+    color: #123C64;
+    font-weight: 600;
+    cursor: text;
+    background-color: #fff;
+    padding-left: 5px; 
+    padding-right: 5px;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+
+}
+
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown).form_input:not(:focus) ~ .form_label {
+    top: -0.6rem;
+    font-size: 14px;
+}
+
+button{
+    background-color: #0A152B;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    width: 8rem;
+    height: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+button:hover{
+    background-color: #fff;
+    border: 2px solid #57CAE9;
+    color: #123C64;
+}
+
+a {
+    color: #123C64;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #123C64;
+    text-decoration: #57CAE9 underline 2px;
+}
+
+#login_message, #register_message{
+    color: #FF414D;
+    font-weight: 600;
+    font-size: 12px;    
+    position: absolute;
+    right: 45%;
+    top: 59.5%;
+}
+
+.register_form{
+    background-color: #fff;
+    width: 30%;
+    height: 70%;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.register{
+    background-color: #57CAE9;
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin: 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register:hover{
+    background-color: #fff;
+    border: 2px solid #57CAE9;
+    color: #57CAE9;
+
+}
+
+.register_active {
+    background-color: #fff;
+    border: 2px solid #57CAE9;
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin: 0;
+    color: #57CAE9;
+    font-weight: 600;
+}
