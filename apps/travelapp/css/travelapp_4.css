@@ -168,6 +168,8 @@ webName {
     display: inline-block;
     margin-right: 40px;
     cursor:pointer;
+    vertical-align: top;
+    width: 250px;
 }
 
 a {

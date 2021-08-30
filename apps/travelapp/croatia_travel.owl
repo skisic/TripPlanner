@@ -889,6 +889,25 @@ Perfect for those who want a worry-free day of adventure, the tour also includes
     
 
 
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#FortyFourRestaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#FortyFourRestaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Restaurant"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#DineIn"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#NoDelivery"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Dubrovnik"/>
+        <Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Miha Pracata 6, 20000, Dubrovnik</Address>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guest House Forty-Four is the perfect place for your dream vacation. A fine dining romantic Restaurant and luxurious apartments, situated in the special atmosphere of the central STRADUN street, right next to the iconic &quot;Ploče Gate&quot;, in the center of the Dubrovnik Old Town. Spacious, fully equipped Rooms with Air-Con, flat screen TV’s, private bathrooms and a lovely terrace, are situated just a few steps from the main Dubrovnik street &quot;Stradun&quot;. Guests can enjoy a wonderful garden, fully covered with WiFi, with the option of on-site dining. The apartment additionally includes airport transfer service, laundry and housekeeping service.</Description>
+        <Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 99 833 4960</Phone>
+        <Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-3</Price>
+        <Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.9</Review>
+        <Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.fortyfourdubrovnik.com/index.php</Website>
+        <schema:image rdf:resource="https://www.croatiaweek.com/wp-content/uploads/2020/08/entrance_2-scaled.jpg"/>
+        <rdfs:label>Forty Four Restaurant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#FranciscanMonastery -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#FranciscanMonastery">
@@ -946,6 +965,43 @@ Perfect for those who want a worry-free day of adventure, the tour also includes
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#HotTub">
         <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Pool"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hot Tub</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#HotelAdria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#HotelAdria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Hotel"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Accessible"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#AirConditioning"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Bar"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Breakfast"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BreakfastBuffet"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BusinessCentre"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#ChildFriendly"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#FitnessCentre"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#FullServiceLaundry"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#HotTub"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#IndoorPool"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#OutdoorPool"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Parking"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Restaurant"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#SmokeFreeProperty"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Wifi"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#24hourFrontDesk"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Dubrovnik"/>
+        <Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radnička ul. 46, 20000, Dubrovnik</Address>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Overlooking the Elaphiti Islands and Gruž&apos;s harbor, this upscale hotel is 2 km from Dubrovnik&apos;s Franciscan Monastery and 3 km from the Rector&apos;s Palace.
+Modern rooms come with free Wi-Fi, as well as flat-screen TVs, minibars and sitting areas. Upgraded rooms add balconies and/or sea views.
+
+A relaxed restaurant has floor-to-ceiling windows offering views of the bay. There&apos;s also a polished bar, an outdoor pool, and a sleek wellness center featuring an indoor pool, a gym and a sauna.</Description>
+        <Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 220 500</Phone>
+        <Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1214</Price>
+        <Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.4</Review>
+        <Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.hotel-adria-dubrovnik.com/</Website>
+        <schema:image rdf:resource="https://www.dubrovnik-online.net/images/hotel_adria_dubrovnik_1.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hotel Adria</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1241,6 +1297,26 @@ Parking and breakfast is complimentary. There&apos;s a simple restaurant featuri
     
 
 
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#NautikaRestaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#NautikaRestaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Restaurant"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#DineIn"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#NoDelivery"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#NoTakeaway"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Dubrovnik"/>
+        <Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brsalje ul. 3, 20000, Dubrovnik</Address>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Whether you wish to indulge in elegant or casual dining, you will long cherish your culinary experiences in the Nautika&apos;s collection of renowned Dubrovnik restaurants at prime locations.</Description>
+        <Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 442 526</Phone>
+        <Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-3</Price>
+        <Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</Review>
+        <Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.nautikarestaurants.com/</Website>
+        <schema:image rdf:resource="https://thewashingtonnote.com/wp-content/uploads/2020/02/Nautika-700x467.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nautika Restaurant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#NoDelivery -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#NoDelivery">
@@ -1324,6 +1400,24 @@ Parking and breakfast is complimentary. There&apos;s a simple restaurant featuri
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#OutdoorPool">
         <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Pool"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outdoor pool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#OysterSushiBarBota -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#OysterSushiBarBota">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Restaurant"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#DineIn"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Takeaway"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Dubrovnik"/>
+        <Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. od Pustijerne, 20000, Dubrovnik</Address>
+        <Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 324 034</Phone>
+        <Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-3</Price>
+        <Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</Review>
+        <Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.bota-sare.hr/dubrovnik</Website>
+        <schema:image rdf:resource="https://media-cdn.tripadvisor.com/media/photo-s/12/ce/68/0d/charming-location-is.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oyster &amp; Sushi Bar Bota</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1521,6 +1615,60 @@ There are 5 restaurants and bars. Other amenities consist of 2 outdoor pools (in
     
 
 
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#RoyalNeptun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#RoyalNeptun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Hotel"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Accessible"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#AccessibleLift"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#AccessibleParking"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#AirConditioning"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BaggageStorage"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Bar"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BeachFront"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BicycleHire"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Breakfast"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BreakfastBuffet"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BusinessCentre"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Cash"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Concierge"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#CreditCards"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#CurrencyExchange"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#DebitCards"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#DoctorOnCall"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#FitnessCentre"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#FullServiceLaundry"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#HorseRiding"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Housekeeping"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#IndoorPool"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Lift"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#MeetingRooms"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#OutdoorPool"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Parking"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Restaurant"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#RoomService"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Sauna"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#SmokeFreeProperty"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Spa"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Tennis"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Wifi"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#24hourFrontDesk"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Dubrovnik"/>
+        <Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. kardinala Stepinca 31d, 20000, Dubrovnik</Address>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Overlooking the Elaphite Islands, this casual hotel on a beach is 3 km from Park šuma Velika i Mala Petka and 4 km from Dubrovnik&apos;s walled old town.
+Streamlined airy rooms feature flat-screen TVs and free Wi-Fi, as well as desks, minibars, and tea and coffeemakers. Upgraded rooms add balconies with sea views, and suites add living areas and sofabeds. Room service is available.
+
+Breakfast is complimentary. There are 3 restaurants and a cocktail bar, all with terrace seating. Other amenities include a sea-view outdoor pool, a spa area and a gym, as well as beach access and water sports. Parking is available.</Description>
+        <Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 440 100</Phone>
+        <Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2100</Price>
+        <Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</Review>
+        <Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.hotelneptundubrovnik.com/en/</Website>
+        <schema:image rdf:resource="https://dfdv0zghb6jws.cloudfront.net/images/images/000/107/148/original/Hotel_Neptun_Outdoor_pool_2.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Royal Neptun</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#SantaMaria -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#SantaMaria">
@@ -1683,6 +1831,70 @@ The beach offers great views over the open seas as well as over nearby Lovrijena
         <Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</Website>
         <schema:image rdf:resource="https://www.dubrovnik-travel.net/wp-content/uploads/sulic-kolorina-beach-dubrovnik1-1024x701.jpg"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sulic Beach</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#SunGardensHotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#SunGardensHotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Hotel"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Accessible"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#AirConditioning"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BaggageStorage"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Bar"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BeachFront"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BicycleHire"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Breakfast"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BreakfastBuffet"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#BusinessCentre"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Cash"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#ChildFriendly"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Concierge"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#CreditCards"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#CurrencyExchange"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#DebitCards"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#FullServiceLaundry"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#MeetingRooms"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#NoPets"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Restaurant"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#RoomService"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#SmokeFreeProperty"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Tennis"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Wifi"/>
+        <hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#24hourFrontDesk"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Housekeeping"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Parking"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Dubrovnik"/>
+        <Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Na moru 1, 20235, Orašac</Address>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alongside a beach on the Adriatic Sea, this upscale resort is 5 km from the 15th-century gardens of Trsteno Arboretum and 11 km from the Old Town of Dubrovnik.
+Bright, nautical-inspired rooms include free Wi-Fi and flat-screens, plus minibars, tea and coffeemakers, and balconies with sea views. Club level rooms and suites offer access to a lounge; suites add living rooms. Posh apartments have kitchenettes.
+
+Parking is complimentary. There are 7 restaurants and 10 bars, as well as indoor and outdoor pools, a fitness center, and a chic spa with a lagoon pool and a juice bar. Tennis, volleyball, a climbing wall and jet ski tours are offered.</Description>
+        <Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 361 500</Phone>
+        <Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2178</Price>
+        <Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</Review>
+        <Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.dubrovniksungardens.com/</Website>
+        <schema:image rdf:resource="https://croatia.hr/sites/default/files/styles/image_full_width/public/2017-09/sunddddd.jpg?itok=2LUo87dp"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun Gardens Dubrovnik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#SunsetLounge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#SunsetLounge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Bar"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#NoDelivery"/>
+        <hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#NoTakeaway"/>
+        <isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#Dubrovnik"/>
+        <Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masarykov put 20, 20000, Dubrovnik</Address>
+        <Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 300 300</Phone>
+        <Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-3</Price>
+        <Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</Review>
+        <Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.adriaticluxuryhotels.com/hotel-dubrovnik-palace/restaurants-and-bars/sunset-lounge/</Website>
+        <schema:image rdf:resource="http://www.afrenchperspective.com/wp-content/uploads/2014/07/ABAKUS-BAR.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunset Lounge</rdfs:label>
     </owl:NamedIndividual>
     
 

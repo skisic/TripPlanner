@@ -89,3 +89,13 @@ retract(user_list(sara,test)).
 retract(user_list(sara,'Sarino putovanje')).
 retract(user_list(sara,test2)).
 assert(user_list(sara,'Varazdin trip')).
+assert(trip_activity(sara,'Varazdin trip','Dubrovnik','Royal Blue Hotel')).
+retract(user_list(sara,'Varazdin trip')).
+assert(user_list(sara,'Dubrovnik Trip 2021')).
+assert(trip_activity(sara,'Dubrovnik Trip 2021','Dubrovnik','Forty Four Restaurant')).
+assert(trip_activity(sara,'Dubrovnik Trip 2021','Dubrovnik','Sun Gardens Dubrovnik')).
+assert(trip_activity(sara,'Dubrovnik Trip 2021','Dubrovnik','Rectors Palace')).
+assert(trip_activity(sara,'Dubrovnik Trip 2021','Dubrovnik','Blue Cave Boat Tour')).
+assert(trip_activity(sara,'Dubrovnik Trip 2021','Dubrovnik','Sea Kayaking and Snorkeling - Dubrovnik Adventure')).
+assert(user_list(sara,'Varazdin Trip 2021')).
+assert(user_list(sara,'My New Trip')).
