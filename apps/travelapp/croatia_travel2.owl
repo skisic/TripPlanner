@@ -1,0 +1,2339 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="http://schema.org/"
+     xmlns:croatia_travel="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small ontology containing basic travel info about Croatia and its cities</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Croatia Travel</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/image -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/image"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#ID -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#ID"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#hasAccommodations -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#hasAccommodations">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#hasActivities -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#hasActivities">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#hasAmenities -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#hasAmenities">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#hasServices -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#hasServices">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#isLocated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#isLocated">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Address">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Phone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Phone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Price">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Review -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Review">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Website -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Website">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessibility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessibility">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accessibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#hasAmenities"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Address"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Description"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Phone"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Price"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Review"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Website"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Price"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Review"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Beach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Beach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessAndEvents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessAndEvents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business and Events</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Children -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Children">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Children</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Cruise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Cruise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cruise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FoodAndDrink -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FoodAndDrink">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food and Drink</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hostel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hostel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hostel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hotel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelActivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Internet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Internet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Landmark -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Landmark">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Landmark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Museum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Museum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Museum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ParkingAndTransport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ParkingAndTransport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parking and Transport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pets -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pets">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pets</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PolicyAndPayment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PolicyAndPayment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Policy and Payment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Region"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Room">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rooms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Service options</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Tour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Tour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wellness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wellness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wellness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessibility"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accessible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AccessibleLift -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AccessibleLift">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessibility"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accessible lift</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AccessibleParking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AccessibleParking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessibility"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accessible parking</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Room"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Air conditioning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AmforaHotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AmforaHotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BeachFront"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BreakfastBuffet"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FitnessCentre"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotTub"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OutdoorPool"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PetsAllowed"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoomService"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SmokeFreeProperty"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Spa"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hvar"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Biskupa Jurja Dubokovica 5, 21450, Hvar</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open seasonally, this upscale, contemporary resort on a beach overlooks the Paklinski Islands in the Adriatic Sea. It&apos;s a 13-minute walk from Hvar Cathedral and 15 minutes&apos; walk from Hvar ferry terminal.
+
+Modern rooms provide free Wi-Fi and flat-screens, safes and minifridges. Upgraded rooms add balconies, some with sea views. The 1- and 2-bedroom suites have separate living rooms. Room service is available.
+
+Breakfast is complimentary, as is parking. The 5 bars and restaurants include a refined restaurant with sea views, and an eatery by an outdoor pool with a swim-up bar. There&apos;s also a rooftop gym, and a 1927 beach club with dining &amp; a bar.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 21 750 300</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1400</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.3</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.suncanihvar.com/amfora-hvar-grand-beach-resort.html</croatia_travel:Website>
+        <schema:image rdf:resource="https://pbs.twimg.com/media/EA0BMTBXYAEGy7t.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amfora Hotel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AngelMuseum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AngelMuseum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Museum"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Silvija Strahimira Kranjčevića 14, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Angels Museum is located in 14 Silvija Strahimira Kranjčevića Street in Varaždin. Often the motifs are the artists&apos; trademark that we recognize without a doubt.
+
+Cezanne&apos;s still life with apples, Van Gogh&apos;s sunflowers, Monnet&apos;s water lilies, Degas&apos;s ballerinas, Prstec&apos;s angels. Indeed, after almost 3 decades of painting a characterictic angel in a Baroque surroundings motifs, artist Željko Prstec has provided his home town with a special, permanent place in art history and a determinant: the city where angels sleep.
+His years-long idea about the Angels Museum in Varaždin finally came true on 13 May 2011. the artwork and actions of Željko Prstec have been going on under the motto „Varaždin, the city where angels sleep“. The motto and the idea were copyrighted and recognized in the public as part of the „Anđelinjak“ project. Just as angels speak all languages, his installations speak out to everyone, regardless of their nationalities, religion or origins.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 98 512 894</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">15</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://angelusmuseum.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://aktualno.hr/wp-content/uploads/2017/11/muzej-andjela-3-750x480.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angels Museum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Aquacity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Aquacity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sport"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallerova aleja 8, 42000 Varaždin</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three kilometers from the center of the baroque city of Varaždin is SRC Aquacity popularly called &quot;Varaždin Sea&quot;, with a landscaped environment, which makes a real oasis for relaxation, walking, swimming and recreation. For every visitor, eager for refreshment in the summer months, you will find the necessary dose of refreshment on more than 5,000 square meters of landscaped beaches and green areas that are largely covered by natural shade.
+
+Fans of sports and recreational activities have at their disposal tennis courts, five-a-side football field, mini golf, beach volleyball. Additional pleasure is provided by the possibility of swimming, cycling and walking, which makes a special touch with nature. For our youngest there is a children&apos;s playground equipped with swings, slides and sandpits.
+
+We are extremely proud of the purity of the lake water, which is regularly analyzed by the Institute of Public Health. Entrance to the complex is NOT CHARGED!</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 421 612</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.2</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://aquacity.hr/</croatia_travel:Website>
+        <schema:image rdf:resource="https://aquacity.hr/wp-content/uploads/2017/08/aquacity-varazdin-labud-u-sumrak-1.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquacity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BaggageStorage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BaggageStorage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Service"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baggage storage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FoodAndDrink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BeachFront -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BeachFront">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelActivity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beach front</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BellevueBeach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BellevueBeach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Beach"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Backed by rocky bluffs, this small pebble beach is a a popular swimming &amp; sunbathing destination.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.5</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Website>
+        <schema:image rdf:resource="https://media-cdn.tripadvisor.com/media/photo-s/17/b8/e3/cb/view-of-the-beach-from.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bellevue Beach</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BicycleHire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BicycleHire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelActivity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bicycle hire</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Big -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Big"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BlueCaveTour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BlueCaveTour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Tour"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gruž Market, 20000, Obala Stjepana Radića 21, 20000, Dubrovnik, Croatia</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avoid the crowds that flock to the Blue Cave by booking a small-group tour to the popular destination. The boat’s crew is dedicated to creating an intimate trip and utilizes alternate routes and less-common departure times to ensure you have a less-crowded experience. Plus, while some trips take all day, this efficient tour is offered in both the morning and afternoon so it is easier to fit into your schedule.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 99 299 3633</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">461</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.0</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.dubrovnikislandstours.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.bluecavetourfromsplit.com/wp-content/uploads/2019/10/48693793831_91dfa9de4d_k.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Cave Boat Tour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FoodAndDrink"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breakfast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BreakfastBuffet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BreakfastBuffet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FoodAndDrink"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breakfast buffet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessCentre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessCentre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessAndEvents"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Centre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Cash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Cash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PolicyAndPayment"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cash</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Children"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Child - friendly</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Concierge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Concierge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Service"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concierge</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CreditCards -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CreditCards">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PolicyAndPayment"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit cards</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CurbsidePickup -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CurbsidePickup">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curbside pickup</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CurrencyExchange -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CurrencyExchange">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PolicyAndPayment"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Currency exchange</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dalmacija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dalmacija">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DebitCards -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DebitCards">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PolicyAndPayment"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debit cards</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Delivery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Delivery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delivery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DineIn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DineIn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dine in</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DoctorOnCall -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DoctorOnCall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wellness"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doctor on call</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DravaJeepSafari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DravaJeepSafari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sport"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dravska ul. 173A, 42209, Svibovec Podravski</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discover labirints of hiddent paths through Drava forest as part of unique adrenaline off-road jeep driving experience, enjoy in beautiful sunsets on pebble beaches in protected are of Drava river, which is part of Mura - Drava - Danue biosphere reserve, watch animals in their natural habitats and much more.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 91 405 0000</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">240</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://more-adventure.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/09/1c/9d/ad.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drava Jeep Safari</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DravaRaftingSafari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DravaRaftingSafari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sport"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dravska ul. 173A, 42209, Svibovec Podravski</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discover protected Mura - Drava - Danue biosphere reserve on rafting safari exerience. Discover hidden watter passages, beautiful pebble beaches, protected animal and plant species, all that with our professional guidance. With our professional guides, safety is guaranteed, just like experience which will stay ingrained in you forever.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 91 405 0000</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">212</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://more-adventure.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://media.tacdn.com/media/attractions-splice-spp-720x480/06/f8/56/80.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drava Rafting Safari</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DravaSupExploring -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DravaSupExploring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sport"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dravska ul. 173A, 42209, Svibovec Podravski</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We are offering unique experience for people looking for adventure. As one of the first touristic agency in Croatia overall, we are offering SUP exploring of Drava river which is part of protected Mura - Drava - Danue biosphere reserve. Discover hidden watter passages, beautiful pebble beaches, protected animal and plant species, all that with our professional guidance. This is one of those life experience which will stay ingrained in you. Don&apos;t miss it!</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 405 0000</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">220</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.9</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://more-adventure.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/1c/9e/b1.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drava Sup Exploring Adventure</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#City"/>
+        <schema:image rdf:resource="https://www.marinareservation.com/articles/wp-content/uploads/2017/02/Dubrovnik-cover.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dubrovnik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ElaphiteIslandsCruise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ElaphiteIslandsCruise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Cruise"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gruž Market, 20000, Obala Stjepana Radića 21, 20000, Dubrovnik, Croatia</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Escape the crowds of Dubrovnik’s busy streets and spend the day relaxing on the sea. This cruise not only explores the picturesque network of islands off of Dubrovnik&apos;s coast but also allows ample time to relax on board while you enjoy an open bar and included lunch.
+
+Perfect for those who want a worry-free day of adventure, the tour also includes snorkeling and swimming opportunities.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 99 299 3633</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">270</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.5</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.dubrovnikislandstours.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6c/7d/6f.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Full Day Elaphite Islands Cruise with Lunch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FitnessCentre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FitnessCentre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wellness"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fitness Centre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FortyFourRestaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FortyFourRestaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DineIn"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDelivery"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Miha Pracata 6, 20000, Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guest House Forty-Four is the perfect place for your dream vacation. A fine dining romantic Restaurant and luxurious apartments, situated in the special atmosphere of the central STRADUN street, right next to the iconic &quot;Ploče Gate&quot;, in the center of the Dubrovnik Old Town. Spacious, fully equipped Rooms with Air-Con, flat screen TV’s, private bathrooms and a lovely terrace, are situated just a few steps from the main Dubrovnik street &quot;Stradun&quot;. Guests can enjoy a wonderful garden, fully covered with WiFi, with the option of on-site dining. The apartment additionally includes airport transfer service, laundry and housekeeping service.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 99 833 4960</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-3</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.9</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.fortyfourdubrovnik.com/index.php</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.croatiaweek.com/wp-content/uploads/2020/08/entrance_2-scaled.jpg"/>
+        <rdfs:label>Forty Four Restaurant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FranciscanMonastery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FranciscanMonastery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Museum"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hvar"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Šetalište put Križa, 21450, Hvar</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An easy stroll from Hvar&apos;s square, along the sea and the waterfront soon brings you to the Franciscan monastery. Within the peace and quiet of the monastery walls, you can enjoy a rich display of museum exhibits (collections of Greek, Roman and Venetian coins, liturgical items, atlas of the ancient cartographer Ptolemaeus, rare exhibits of amphora, etc.), as well as paintings of Venetian artists like Francesco Santacroce and Palma Junior. The monastery is known for its magnificent painting of the Last Supper (2 x 8 m) which leaves everyone breathless. Some critics believe it is the work of a painter from Ravenna Matteo Ingoli, whilst others think that the painting belongs to the school of Palma Junior. One more rarity that makes the monastery famous is the 300-year old cypress that is located in the garden of the monastery.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 21 741 193</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.5</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.otok-hvar.hr/tours/franjevacki-samostan-hvar/HV-TR-28</croatia_travel:Website>
+        <schema:image rdf:resource="https://promessi.com.hr/wp-content/uploads/2020/03/franjevacki-samostan-1.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franciscan Monastery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Service"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Full Service Laundry</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#GameOfThronesTour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#GameOfThronesTour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Tour"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Large Onofrio&apos;s Fountain, Poljana Paska Miličevića 2000, 20000, Dubrovnik, Croatia</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Follow in the footsteps of the &apos;Game of Thrones&apos; cast on this special walking tour of Dubrovnik. Perfect for fans of the hit TV series, this itinerary whisks you away to many of the city’s most important and scenic filming locations, from Lovrijenac Fort to Pile Gate. As you go, learn behind-the-scenes stories from your guide, who may just have been an extra on the series.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 436 846</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">149</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.0</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.dubrovnik-walking-tours.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.dubrovnik-online.net/images/tours/game-of-thrones-tours-1.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Game of Thrones Tour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HorseRiding -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HorseRiding">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelActivity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horse riding</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotTub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotTub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pool"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hot Tub</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelAdria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelAdria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BreakfastBuffet"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessCentre"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FitnessCentre"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotTub"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#IndoorPool"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OutdoorPool"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SmokeFreeProperty"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radnička ul. 46, 20000, Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Overlooking the Elaphiti Islands and Gruž&apos;s harbor, this upscale hotel is 2 km from Dubrovnik&apos;s Franciscan Monastery and 3 km from the Rector&apos;s Palace.
+Modern rooms come with free Wi-Fi, as well as flat-screen TVs, minibars and sitting areas. Upgraded rooms add balconies and/or sea views.
+
+A relaxed restaurant has floor-to-ceiling windows offering views of the bay. There&apos;s also a polished bar, an outdoor pool, and a sleek wellness center featuring an indoor pool, a gym and a sauna.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 220 500</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1214</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.4</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.hotel-adria-dubrovnik.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.dubrovnik-online.net/images/hotel_adria_dubrovnik_1.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hotel Adria</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelDubrovnikPalace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelDubrovnikPalace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BreakfastBuffet"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessCentre"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FitnessCentre"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotTub"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPets"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OutdoorPool"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoomService"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SmokeFreeProperty"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Spa"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masarykov Put 20, 20 000 Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breathtaking Adriatic views from every room, a fresh new contemporary interior design scheme and intuitive service are all ingredients for a perfect five-star seaside escape at the multi award-winning Hotel Dubrovnik Palace.
+
+Hotel Dubrovnik Palace nestles on the scenic seafront between a pine forest and the turquoise coastal waters of the lush Lapad peninsula. Just a few minutes’ drive north west of medieval Dubrovnik Old Town, the stunning location offers phenomenal photo opportunities of the Elafiti Islands from every direction.
+
+Our contemporary luxury resort has direct access to a quiet and peaceful beach, two outdoor pools plus a third indoor pool. Additionally, we have a PADI diving centre, tennis court, and a leafy jogging path and walking routes through the picturesque woods that rise up Petka hill behind the hotel.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 300 300</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2137</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.adriaticluxuryhotels.com/hotel-dubrovnik-palace/</croatia_travel:Website>
+        <schema:image rdf:resource="https://pix10.agoda.net/hotelImages/9202640/-1/5bc2ffa91fa292961a6acd172f600359.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hotel Dubrovnik Palace</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelIstra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelIstra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPools"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Ivana Kukuljevića Sakcinskog 6, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Housed in a building dating from 1911, this informal hotel in the historic city center is 2 minutes&apos; walk from Draskovic Palace and a 10-minute walk from Varaždin train station.
+
+The unpretentious rooms are simply furnished, and come with flat-screen TVs. Some quarters also have sitting areas, sloped ceilings and/or skylights.
+
+There&apos;s a down-to-earth American-style cafe/bar.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 659 659</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">570</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.3</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.istra-hotel.hr/hr/</croatia_travel:Website>
+        <schema:image rdf:resource="https://evarazdin.hr/upload/2018/09/kafici_nekada-12_5ba63e2150249.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hotel Istra</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelTurist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelTurist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPools"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PetsAllowed"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoomService"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aleja kralja Zvonimira 1, 42000</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Set on an unassuming residential square, this low-key hotel is a 10-minute walk from Varaždin Castle and the Old Town, and 8 km from aquatic activities at Lake Varaždin.
+
+Conservative rooms with traditional wood furnishings feature flat-screen TVs and minibars, as well as desks. Wi-Fi is available. Room service is offered.
+
+There&apos;s a rustic restaurant featuring exposed beams and stone walls, plus a bar and a terrace. Other amenities include a gym and 8 conference rooms. Parking is available.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 2 395 395</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.1</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://hotel-turist.hr/</croatia_travel:Website>
+        <schema:image rdf:resource="https://pix10.agoda.net/hotelImages/215/2159590/2159590_17042105190052527062.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hotel Turist</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelVarazdin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelVarazdin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPools"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolodvorska ul. 19, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This hotel in a modest, low-rise building is a minute&apos;s walk from Varaždin train station and a 14-minute walk from Stari grad castle.
+Down-to-earth rooms offer free Wi-Fi, flat-screen TVs and minifridges. Some quarters add sofas and/or sitting areas. Kids age 12 and under stay free with an adult.
+
+Parking and breakfast is complimentary. There&apos;s a simple restaurant featuring exposed brickwork and vaulted ceilings. Other amenities include a bar and a terrace.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 290 720</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">600</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.5</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://hotelvarazdin.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://croatia.hr/Images/t900x600-10488/hotel_vara_din.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hotel Varazdin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Housekeeping -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Housekeeping">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Service"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Housekeeping</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hvar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hvar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#City"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hvar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#IndoorPool -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#IndoorPool">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pool"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indoor pool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Kitchen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Kitchen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Room"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kitchen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#KorzoVarazdin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#KorzoVarazdin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Landmark"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trg Kralja Tomislava</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The main town square, popularly called Korzo, is a gathering place of citizens thanks to numerous café terraces and coffee-houses. In the south part there is the Palace of the Drašković Counts, which has stood there since the 16th century. The present-day building was built in the 18th century. The Town Hall, which was built in the 15th century, is the central building in the Square. It owes its present form to the renovation of a façade, which started in 1791 and finished in 1793. A building of the Faculty of Organisation and Informatics of the University of Zagreb is also located in the main town square.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.varazdinfilmcommission.eu/en/locations/streets-squares/king-tomislav-square-varazdin.html</croatia_travel:Website>
+        <schema:image rdf:resource="https://a0.muscache.com/pictures/9d70a4d8-2b3c-4615-802f-a4384b7f7010.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korzo Varazdin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Lift -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Lift">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Service"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lift</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Lovrijenac -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Lovrijenac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Landmark"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. od Tabakarije 29, 20000, Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fort Lovrijenac or St. Lawrence Fortress, often called &quot;Dubrovnik&apos;s Gibraltar&quot;, is a fortress and theater outside the western wall of the city of Dubrovnik in Croatia, 37 metres (121 ft) above sea level.[1] Famous for its plays and importance in resisting Venetian rule, it overshadows the two entrances to the city, from the sea and by land. Early in the 11th century the Venetians attempted to build a fort on the same spot where Fort Lovrijenac currently stands. If they had succeeded, they would have kept Dubrovnik under their power, but the people of the city beat them to it. The &quot;Chronicles of Ragusa&quot; reveal how the fort was built within just three months time and from then on constantly reconstructed. When the Venetian ships arrived, full of materials for the construction of the fort, they were told to return to Venice.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 417 983</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://tzdubrovnik.hr/lang/en/get/spomenici/5343/lovrijenac_fort.html</croatia_travel:Website>
+        <schema:image rdf:resource="https://dodubrovnik.com/wp-content/uploads/fort-lovrijenac.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lovrijenac</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MeaCulpaBar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MeaCulpaBar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDelivery"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDineIn"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoTakeaway"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Ivana Padovca 1, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 300 868</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-2</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.8</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://meaculpa.com.hr/</croatia_travel:Website>
+        <schema:image rdf:resource="http://map-kiosk.com/croatia-varazdin/files/meaculpabar11.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mea Culpa Club and Cafe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MedinaSkrinja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MedinaSkrinja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDelivery"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDineIn"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Juraja Habdelića 4, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 350 894</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-2</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://medinaskrinja.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://d35nxk5xx1d0px.cloudfront.net/repository/images/2/f/b/f/2fbf04ca98c9ef564fbb4c39471b6c69.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medina Škrinja</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Medium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Medium"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MeetingRooms -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MeetingRooms">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessAndEvents"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meeting rooms</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MliniBeach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MliniBeach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Beach"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hvar"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nestled in a protected cove fringed by cypress and pine trees, Mlini Beach attracts beachgoers with it sparkling turquoise waters and relaxed vibe. Far removed from tourist crowds, this pebble beach offers a choice of swimming and sunbathing spots. Cafes and restaurants line the seaside promenade, while the center of the village--with the little brook meandering through its center--retains its rustic charm. For more activities, take a water taxi to Dubrovnik Old Town or sail off the coast to one of the nearby small islands.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Website>
+        <schema:image rdf:resource="https://i.pinimg.com/originals/8c/12/41/8c1241b433bb024d0da5cfaba7338625.jpg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MyWay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MyWay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDelivery"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDineIn"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoTakeaway"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trg Miljenka Stančića 1, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 91 500 6610</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-2</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.facebook.com/vzbar/</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.klikcup.com/images/objects/341/my-way-1.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">My Way</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NautikaRestaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NautikaRestaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DineIn"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDelivery"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoTakeaway"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brsalje ul. 3, 20000, Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Whether you wish to indulge in elegant or casual dining, you will long cherish your culinary experiences in the Nautika&apos;s collection of renowned Dubrovnik restaurants at prime locations.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 442 526</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-3</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.nautikarestaurants.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://thewashingtonnote.com/wp-content/uploads/2020/02/Nautika-700x467.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nautika Restaurant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDelivery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDelivery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No delivery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDineIn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDineIn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No dine in</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPets -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPets">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pets"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No pets</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPools -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPools">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pool"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No pools</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoTakeaway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoTakeaway">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No takeaway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OldTown -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OldTown">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Landmark"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At the heart of the city, the Old Town is enclosed by medieval walls with battlements offering views of the Old Port. Art, weapons, and photos are on display at the Cultural History Museum in the Gothic-style Rector’s Palace, a film location for TV’s “Game of Thrones.” Bars, seafood restaurants, and traditional eateries dot the area, and pedestrianized Stradun street is lined with souvenir shops and fashion stores.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.dubrovnik-travel.net/dubrovnik-old-town/</croatia_travel:Website>
+        <schema:image rdf:resource="https://loveincstatic.blob.core.windows.net/loveexploring/IMAGES/Dubrovnik/old-walls-dubrovnik.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Old Town</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OldTownCastle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OldTownCastle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Museum"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Šetalište Josipa Jurja Strossmayera 1, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feudal fortress built between the 14th &amp; 19th centuries, now housing a local-history museum.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 658 754</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.gmv.hr/</croatia_travel:Website>
+        <schema:image rdf:resource="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ccc70542013657.57bd386a2d17a.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Old Town Castle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OutdoorPool -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OutdoorPool">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pool"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outdoor pool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OysterSushiBarBota -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OysterSushiBarBota">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DineIn"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Takeaway"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. od Pustijerne, 20000, Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 324 034</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-3</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.bota-sare.hr/dubrovnik</croatia_travel:Website>
+        <schema:image rdf:resource="https://media-cdn.tripadvisor.com/media/photo-s/12/ce/68/0d/charming-location-is.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oyster &amp; Sushi Bar Bota</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PansionMaltar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PansionMaltar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hostel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Franca Prešerna 1, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pansion ’’Maltar’ is a family run facility in the centre of Varaždin.
+
+Within the main and separated facility there are 50 beds in comfortable rooms and suites.
+
+There is a ’’ Bed and Breakfast ’’ service and you can enjoy our café which is open from 6 am till 11 pm.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 311 100</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">495</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.4</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.maltar.hr/en_naslovna.html</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.tourism-varazdin.hr/wp-content/uploads/2017/04/dsc04118.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pansion Maltar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ParkBoutiqueHotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ParkBoutiqueHotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BreakfastBuffet"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotTub"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPets"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoomService"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Juraja Habdelića 6, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Within Varaždin Park, this informal hotel with modern touches is 2 minutes on foot from the Cathedral of the Assumption of the Virgin Mary, 7 minutes&apos; walk from the 1300s Old Town fortress and a 9-minute walk from Varaždin train station.
+
+Relaxed rooms offer flat-screen TVs, Wi-Fi access and minibars, plus sitting areas. Some feature wall art or cathedral views. Bi-level upgraded rooms sleep up to 6 guests.
+
+There&apos;s a polished international restaurant, and a cafe with a terrace. Other amenities include a garden, and conference/event space for up to 120 people. A spa area has a hot tub and a sauna. A breakfast buffet is available.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 420 300</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">818</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.park-boutique-hotel.eu/</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.menerga.hr/wp-content/uploads/sites/4/2016/12/Gastrocom_park-hotel_2016_09_photocopyright-by-darko-gorenak-godar.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Park Boutique Hotel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ParkingAndTransport"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parking</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PetsAllowed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PetsAllowed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pets"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pets allowed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PharosHotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PharosHotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BreakfastBuffet"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OutdoorPool"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PetsAllowed"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hvar"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Dinka Kovačevića 10, 21450, Hvar</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Offering views of the Mediterranean Sea, this informal hotel is a 9-minute walk from Hvar Cathedral and a 12-minute walk from Španjola Fortress, Hvar.
+Low-key rooms and suites feature free Wi-Fi, flat-screen TVs and safes. Some have balconies, separate living areas and/or terraces.
+
+Breakfast and parking are complimentary. Other amenities include an outdoor pool, 2 bars and a restaurant.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 21 750 500</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1100</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.2</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.suncanihvar.com/hotel-pharos.html</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.suncanihvar.com/sites/default/files/styles/teaser_default/public/slideshow-asset/pharosexterijer2-min.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pharos Bayhill Hotel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RectorsPalace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RectorsPalace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Museum"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Pred Dvorom 3, 20000, Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Rector&apos;s Palace is a palace in the city of Dubrovnik that used to serve as the seat of the Rector of the Republic of Ragusa between the 14th century and 1808. It was also the seat of the Minor Council and the state administration.
+
+Today the Rectors Palace houses the Cultural-historic Department of the Dubrovnik Museum with exhibition halls arranged to display the original setting with antique furniture and objects for daily use, as well as paintings by local and Italian masters.
+
+The Museum also guards a collection of old coins used in the Dubrovnik Republic, a collection of arms and utensils of Domus Christi Pharmacy from the 15th century. Apart from being exceptionally beautiful, the Rectors Palace Atrium has excellent acoustics, and is often used as a concert venue.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 312 011</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">130</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.4</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://tzdubrovnik.hr/lang/en/get/spomenici/5457/the_rectors_palace.html</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.thedubrovniktimes.com/media/k2/items/cache/d4787dd5e343f0770fca324ff3790833_XL.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rectors Palace</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FoodAndDrink"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoomService -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoomService">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FoodAndDrink"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Room Service</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoyalBlueHotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoyalBlueHotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AccessibleLift"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BaggageStorage"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessCentre"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Cash"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Concierge"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CreditCards"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CurrencyExchange"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DebitCards"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DoctorOnCall"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FitnessCentre"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotTub"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Housekeeping"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#IndoorPool"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Lift"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MeetingRooms"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPets"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OutdoorPool"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sauna"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SmokeFreeProperty"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Spa"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ValetParking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. kardinala Stepinca 31e, 20000, Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Across from a rocky shoreline on the Adriatic Sea, this polished hotel is 6 km from the Walls of Dubrovnik and the 14th-century Rector&apos;s Palace, and 25 km from Dubrovnik Airport.
+
+Featuring balconies, the stylish rooms come with flat-screens, minibars, and tea and coffeemakers. Upgraded rooms add sea views. Room service is offered.
+
+There are 5 restaurants and bars. Other amenities consist of 2 outdoor pools (including an adults-only rooftop pool), and a spa area with an indoor pool, a gym and saunas. There&apos;s also a waterfront deck with sunloungers and umbrellas. Karaoke facilities and babysitting services are offered. Breakfast is available.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 440 100</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3000</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.hotelroyalblue.com/en/</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.jet2holidays.com/HotelImages/Web/DBV_74659_Royal_Blue_Htl_0517_04.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Royal Blue Hotel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoyalNeptun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoyalNeptun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AccessibleLift"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AccessibleParking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BaggageStorage"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BeachFront"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BicycleHire"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BreakfastBuffet"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessCentre"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Cash"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Concierge"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CreditCards"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CurrencyExchange"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DebitCards"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DoctorOnCall"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FitnessCentre"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HorseRiding"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Housekeeping"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#IndoorPool"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Lift"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MeetingRooms"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OutdoorPool"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoomService"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sauna"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SmokeFreeProperty"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Spa"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Tennis"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. kardinala Stepinca 31d, 20000, Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Overlooking the Elaphite Islands, this casual hotel on a beach is 3 km from Park šuma Velika i Mala Petka and 4 km from Dubrovnik&apos;s walled old town.
+Streamlined airy rooms feature flat-screen TVs and free Wi-Fi, as well as desks, minibars, and tea and coffeemakers. Upgraded rooms add balconies with sea views, and suites add living areas and sofabeds. Room service is available.
+
+Breakfast is complimentary. There are 3 restaurants and a cocktail bar, all with terrace seating. Other amenities include a sea-view outdoor pool, a spa area and a gym, as well as beach access and water sports. Parking is available.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 440 100</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2100</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.hotelneptundubrovnik.com/en/</croatia_travel:Website>
+        <schema:image rdf:resource="https://dfdv0zghb6jws.cloudfront.net/images/images/000/107/148/original/Hotel_Neptun_Outdoor_pool_2.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Royal Neptun</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SantaMaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SantaMaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CurbsidePickup"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Delivery"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DineIn"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optujski odvojak 12, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 888 888</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-2</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.santamaria.hr/</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.klikcup.com/images/objects/1625/santa-maria-restaurant-2.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santa Maria</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sauna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sauna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wellness"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sauna</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SeaKayakingDubrovnik -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SeaKayakingDubrovnik">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sport"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brsalje ul. 5, 20000, Dubrovnik, Croatia</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Take a break from walking around Dubrovnik Old Town and see it from angles many visitors never experience on this guided kayaking tour. Paddle a kayak around the medieval walls and across the channel to the waters near Lokrum Island. Swim, snorkel, and snack at a popular but isolated beach-cave on the mainland. A choice of departure times gives you flexibility, and if you select the evening time slot, enjoy the sunset and chilled wine on the beach. No previous kayaking experience required.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 99 336 1336</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">205</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.2</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.adventuredubrovnik.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://cdn.getyourguide.com/img/tour/5d87340e74222.jpeg/146.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sea Kayaking and Snorkeling - Dubrovnik Adventure</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SermagePalace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SermagePalace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Museum"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trg Miljenka Stančića 3, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">As one of the departments the Museum also houses the Gallery of Old and Contemporary Masters. Since 1939 the Gallery has collected more than 5300 works of art, which have been divided into 10 separate collections. Currently there are two permanent exhibitions: The Old Masters and The 20th Century Croatian Masters, which are alternately on display on the first floor of the baroque Sermage palace.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 214 172</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.gmv.hr/en/museum-collections/the-sermage-palace/</croatia_travel:Website>
+        <schema:image rdf:resource="https://croatia.hr/Images/t900x600-17059/central_croatia_varazdin_sermage_palace_001.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sermage Palace</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SjevernaHrvatska -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SjevernaHrvatska">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Small -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Small"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SmokeFreeProperty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SmokeFreeProperty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PolicyAndPayment"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smoke - free property</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Spa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Spa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wellness"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Split -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Split">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#City"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Split</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#StariGradHvar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#StariGradHvar">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stari Grad</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Stradun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Stradun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Landmark"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stradun or Placa is the main street of Dubrovnik, Croatia. The limestone-paved pedestrian street runs some 300 metres through the Old Town, the historic part of the city surrounded by the Walls of Dubrovnik.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.5</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Website>
+        <schema:image rdf:resource="https://happytovisit.com/glib/3/dubrovnik_stradun-1177.png"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stradun</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#StraussBar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#StraussBar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDelivery"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Ivana Padovca 2, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 91 955 6505</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-2</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.4</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://strauss.business.site/</croatia_travel:Website>
+        <schema:image rdf:resource="https://d35nxk5xx1d0px.cloudfront.net/repository/images/8/4/5/b/845b237c51688c1ca6c9d59086cc4361.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STRAUSS Caffe and Bar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SulicBeach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SulicBeach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Beach"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. od Tabakarije 37</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Šulić beach (pronounced “shoo-lich“), also known as Kolorina is located in Kolorina bay, just outside of town walls. The beach that is named after a local family and is considered as one of the oldest swimming spots in Dubrovnik.
+
+Mostly used by locals, this beach is also popular by day-trippers and short-time (24 hrs) visitors to the town.
+
+The beach offers great views over the open seas as well as over nearby Lovrijenac tower that is situated just there – on the eastern side of the bay, on the top of the tall cliff as well as on the popular local Gradac park that is on the top of the cliffs on the western side.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.dubrovnik-travel.net/wp-content/uploads/sulic-kolorina-beach-dubrovnik1-1024x701.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sulic Beach</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SunGardensHotel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SunGardensHotel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hotel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BaggageStorage"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BeachFront"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BicycleHire"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BreakfastBuffet"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessCentre"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Cash"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Concierge"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CreditCards"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CurrencyExchange"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DebitCards"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Housekeeping"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MeetingRooms"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPets"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoomService"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SmokeFreeProperty"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Tennis"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Na moru 1, 20235, Orašac</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alongside a beach on the Adriatic Sea, this upscale resort is 5 km from the 15th-century gardens of Trsteno Arboretum and 11 km from the Old Town of Dubrovnik.
+Bright, nautical-inspired rooms include free Wi-Fi and flat-screens, plus minibars, tea and coffeemakers, and balconies with sea views. Club level rooms and suites offer access to a lounge; suites add living rooms. Posh apartments have kitchenettes.
+
+Parking is complimentary. There are 7 restaurants and 10 bars, as well as indoor and outdoor pools, a fitness center, and a chic spa with a lagoon pool and a juice bar. Tennis, volleyball, a climbing wall and jet ski tours are offered.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 361 500</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2178</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.dubrovniksungardens.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://croatia.hr/sites/default/files/styles/image_full_width/public/2017-09/sunddddd.jpg?itok=2LUo87dp"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun Gardens Dubrovnik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SunsetLounge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SunsetLounge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDelivery"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoTakeaway"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masarykov put 20, 20000, Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 300 300</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-3</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.adriaticluxuryhotels.com/hotel-dubrovnik-palace/restaurants-and-bars/sunset-lounge/</croatia_travel:Website>
+        <schema:image rdf:resource="http://www.afrenchperspective.com/wp-content/uploads/2014/07/ABAKUS-BAR.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunset Lounge</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SvetiJakovBeach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SvetiJakovBeach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Beach"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sveti Jakov Beach, one of the most beautiful beaches in Dubrovnik is located in the eastern part of Dubrovnik Town in the tiny bay offering a distant look to the Lokrum and Old Town.
+
+It is situated about a mile away from the Old Town so you can reach it either by foot or by bus no 5 or 8. If you take the bus wait until the last stop where you get off the bus as the beach is just a few hundred meters away, down the hill.
+
+Once you arrive near the Sv. Jakov church which is situated on the top of the cliff,  just around the corner of the church is a staircase to descend down to the Beach. There are about 160 steps to the beach and I must say –  getting back can be a bit of a pain.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.5</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.placesofjuma.com/wp-content/uploads/2020/07/Dubrovnik-Sveti-Jakov-1-scaled.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sveti Jakov Beach</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Takeaway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Takeaway">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Takeaway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#TavernaLoggia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#TavernaLoggia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DineIn"/>
+        <croatia_travel:hasServices rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Takeaway"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Nikole Tesle 8, 20000, Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 91 628 1907</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">-3</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.9</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.facebook.com/tavernaloggia/</croatia_travel:Website>
+        <schema:image rdf:resource="https://media-cdn.tripadvisor.com/media/photo-s/1d/4d/21/83/terrace.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taverna Loggia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Tennis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Tennis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelActivity"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tennis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#TvrdavaFortica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#TvrdavaFortica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Landmark"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hvar"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanjola, Ul. Biskupa Jurja Dubokovica 80, 21450, Hvar</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Looming high above the town and lit with a golden glow at night, this medieval castle occupies the site of an ancient Illyrian settlement dating from before 500 BC. The views looking down over Hvar and the Pakleni Islands are magnificent, and well worth the trudge up through the old-town streets. Once you clear the town walls it&apos;s a gently sloping meander up the tree-shaded hillside to the fortress – or you can drive to the very top (100KN in a taxi).
+
+The Byzantines built a citadel here in the 6th century, and the Venetians began construction of the present fortress in 1278. It was strengthened in 1551, which may have saved the lives of Hvar&apos;s population, who sheltered here in 1571 when the Turks sacked their town. The Austrians renovated it in the 19th century, adding barracks. Inside there&apos;s a collection of ancient amphorae recovered from the seabed, and a terrace cafe.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 21 718 336</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.6</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.island-hvar.com.hr/hr/kroz-povijest/tvrdava-fortica-9</croatia_travel:Website>
+        <schema:image rdf:resource="https://lp-cms-production.imgix.net/2019-06/d9175fc0fbca91cd35a1388a17588e6d-fortica.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tvrdava Fortica</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ValetParking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ValetParking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ParkingAndTransport"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valet parking</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#City"/>
+        <schema:image rdf:resource="https://croatia.hr/sites/default/files/styles/image_full_width/public/2019-03/varazdin-ivo-biocina-1-1-1.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Varazdin</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Varaždin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#WallsOfDubrovnik -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#WallsOfDubrovnik">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Landmark"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dubrovnik</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Today’s size of the Dubrovnik walls was shaped in the 13th century. The walls were systematically updated and built up to 1660 when the last Bastion of St Stephan was finished in the southern segment of the walls. The 1940m long walls consist of the main city wall, sixteen towers, three fortresses, six bastions, two corner fortifications (’kantonate’), three bulwarks with rows of turrets, three moats, two flank fortresses, one breakwater, and two drawbridges. At some points up to 25 m high, the main wall is 4 – 6 m thick on the land side and 1,5 to 3 m on the seaside.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 20 638 800</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://citywallsdubrovnik.hr/</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.placesofjuma.com/wp-content/uploads/2020/11/Dubrovnik-92-scaled.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walls of Dubrovnik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Internet"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Free Wi-Fi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#WorldOfInsectsMuseum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#WorldOfInsectsMuseum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Museum"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Šetalište Josipa Jurja Strossmayera 1, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Since 1954, the Hercer Classicist Palace has housed the Entomology Department of the Varaždin City Museum, which houses a valuable and unique collection of the greatest Varaždin naturalist, high school professor and the founder and first curator of that Department, Franjo Košćec.
+Collection of prof. Košćec is presented in a permanent exhibition entitled The World of Insects, which was restored in the late 90s of the last century, and according to experts and the audience that visits it, it is one of the most beautiful of its kind in Europe. Through several themes: In the forest, By the forest and on the meadow, In the water and on the shore, At night and in the ground, on approximately 4500 exhibits, the biology of insects is clearly shown in the exhibition. The items on display are entomological preparations, vertebrate dermopreparations, herbarium specimens of plants, enlarged models of insects, photographs and various objects from the legacy of prof. Košćec. Among them, for example, are the aids that he designed and made for the processing of his collections.
+In the part of the permanent exhibition, other Varaždin naturalists from the end of the 19th and the beginning of the 20th century are also presented, and one room is arranged as the study of prof. Košćec.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 658 754</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.gmv.hr/</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.tourism-varazdin.hr/wp-content/uploads/2015/02/muzeji-zbirke-2015-03-003.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World of Insects</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Service"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24 hour Front Desk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#B&amp;BArbiaDorka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#B&amp;BArbiaDorka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hostel"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Kitchen"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPets"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPools"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SmokeFreeProperty"/>
+        <croatia_travel:hasAmenities rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+        <croatia_travel:isLocated rdf:resource="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+        <croatia_travel:Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ul. Alojzija Stepinca 7, 42000, Varaždin</croatia_travel:Address>
+        <croatia_travel:Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arbia Palace Dorka was built in 1843. Its construction details and antiques from the period, as well as elegant furniture, are what makes Arbia Palace Dorka stand out. 
+
+All rooms are featured with a unique design and the use of top-quality materials.
+
+It is located in a pupolar and quiet part of Varaždin and offers its guests a peaceful sleep, yet close to all important sights and facilities.
+
+Arbia Palace Dorka is part of the Arbia Group, which has several facilities on the Adriatic coast and has a long tradition in tourism.</croatia_travel:Description>
+        <croatia_travel:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+385 42 302 104</croatia_travel:Phone>
+        <croatia_travel:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#int">873</croatia_travel:Price>
+        <croatia_travel:Review rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.7</croatia_travel:Review>
+        <croatia_travel:Website rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://arbiapalace.com/</croatia_travel:Website>
+        <schema:image rdf:resource="https://www.turizam-vzz.hr/media/k2/galleries/111/154733127.jpg"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B&amp;B Arbia Dorka</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bar</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restaurant</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessibility"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessAndEvents"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Children"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FoodAndDrink"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelActivity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Internet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ParkingAndTransport"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pets"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PolicyAndPayment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Pool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Room"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Service"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wellness"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Region"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accommodation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Activity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Amenity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Region"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ServiceOptions"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Beach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Cruise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Landmark"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Museum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sport"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Tour"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Beach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Landmark"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Museum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sport"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Accessible"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AccessibleLift"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AccessibleParking"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AirConditioning"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AmforaHotel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#AngelMuseum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Aquacity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BaggageStorage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Bar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BeachFront"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BellevueBeach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BicycleHire"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Big"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BlueCaveTour"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Breakfast"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BreakfastBuffet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#BusinessCentre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Cash"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ChildFriendly"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Concierge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CreditCards"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CurbsidePickup"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#CurrencyExchange"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dalmacija"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DebitCards"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Delivery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DineIn"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DoctorOnCall"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DravaJeepSafari"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DravaRaftingSafari"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#DravaSupExploring"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Dubrovnik"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ElaphiteIslandsCruise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FitnessCentre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FranciscanMonastery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#FullServiceLaundry"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#GameOfThronesTour"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HorseRiding"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotTub"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelDubrovnikPalace"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelIstra"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelTurist"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#HotelVarazdin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Housekeeping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Hvar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#IndoorPool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Kitchen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#KorzoVarazdin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Lift"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Lovrijenac"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MeaCulpaBar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MedinaSkrinja"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Medium"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MeetingRooms"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MliniBeach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#MyWay"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDelivery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoDineIn"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPets"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoPools"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#NoTakeaway"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OldTown"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OldTownCastle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#OutdoorPool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PansionMaltar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ParkBoutiqueHotel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Parking"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PetsAllowed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#PharosHotel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RectorsPalace"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Restaurant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoomService"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#RoyalBlueHotel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SantaMaria"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Sauna"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SeaKayakingDubrovnik"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SermagePalace"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SjevernaHrvatska"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Small"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SmokeFreeProperty"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Spa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Split"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#StariGradHvar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Stradun"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#StraussBar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SulicBeach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#SvetiJakovBeach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Takeaway"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#TavernaLoggia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Tennis"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#TvrdavaFortica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#ValetParking"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Varazdin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#WallsOfDubrovnik"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#Wifi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#WorldOfInsectsMuseum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#24hourFrontDesk"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#B&amp;BArbiaDorka"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

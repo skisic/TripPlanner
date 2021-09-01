@@ -49,7 +49,7 @@ function ask(query){
         destroy: true,
         onsuccess: function() {
             //jsonString = JSON.stringify(this.data);
-            //writeln(jsonString);
+            //console.log(this.data);
             showResults(this.data);
             if (this.more) {
                 pengine.next();

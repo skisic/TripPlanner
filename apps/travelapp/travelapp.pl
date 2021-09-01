@@ -6,7 +6,8 @@
 	   get_hotel_info/7,
 	   get_bar_restaurant_info/6,
 	   get_activity_info/7,
-	   get_bar_restaurant_services/2
+	   get_bar_restaurant_services/2,
+	   get_city_activity/3
 	]).
 :- include(database).
 :- use_module(pengine_sandbox:library(pengines)).
@@ -23,10 +24,10 @@ sandbox:safe_primitive(travelapp:remove_list(_,_)).
 sandbox:safe_primitive(travelapp:add_activity(_,_,_,_)).
 sandbox:safe_primitive(travelapp:remove_activity(_,_,_,_)).
 
-path(X) :- absolute_file_name('croatia_travel.owl', X, [mode(read)]).
+path(X) :- absolute_file_name('croatia_travel2.owl', X, [mode(read)]).
 
 ?- path(X), rdf_load(X).
-?- rdf_register_prefix(t,'http://www.semanticweb.org/sara/ontologies/2021/7/untitled-ontology-2#').
+?- rdf_register_prefix(t,'http://www.semanticweb.org/sara/ontologies/2021/7/croatia_travel#').
 ?- rdf_register_prefix(schema,'http://schema.org/').
 
 get_city_img(City, Image):- rdf(Name, rdf:type, t:'City'), 
@@ -43,6 +44,14 @@ get_activity_type(ActivityName, TypeName, CityName, Image, Review, Price):- (rdf
 						rdf(Activity, schema:image, Image),
 						rdf(Activity, t:'Review', Review),
 						rdf(Activity, t:'Price', Price).
+
+get_city_activity(ActivityName, TypeName, CityName):- (rdf(Type, rdfs:subClassOf, t:'Activity');
+						rdf(Type, rdfs:subClassOf, t:'Accommodation')),
+						rdf(Activity, rdf:type, Type),
+						rdf(Type, rdfs:label, literal(type('http://www.w3.org/2001/XMLSchema#string',TypeName))),
+						rdf(Activity, rdfs:label, literal(type('http://www.w3.org/2001/XMLSchema#string',ActivityName))),
+						rdf(City, rdfs:label, literal(type('http://www.w3.org/2001/XMLSchema#string',CityName))),
+						rdf(Activity, t:'isLocated', City).
 
 get_hotel_amenities(HotelName, AmenityName, AmenityTypeName):- 
 						(rdf(Accommodation, rdf:type, t:'Hotel');
