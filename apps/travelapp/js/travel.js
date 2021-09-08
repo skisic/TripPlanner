@@ -179,10 +179,10 @@ function displayHotelResult(y){
         if(sessionStorage.getItem("username") != null && listCount != 0){
             openAddTripPopup();
             currentActivity = y;
-        } else if (sessionStorage.getItem("username") != null && listCount == 0){
+        } if (sessionStorage.getItem("username") != null && listCount == 0){
             openAddListPopup();
             currentActivity = y;
-        } else if (sessionStorage.getItem("username") == null ){
+        } if (sessionStorage.getItem("username") == null ){
             window.open("./login.html","_self");
         }
         
@@ -395,6 +395,12 @@ function addList(){
     var name = $("#listName").val();
     var query = "add_list('"+ username + "', '" + name + "')";
     ask(query);
+    if (sessionStorage.getItem("username") != null && listCount == 0){
+        var query = "add_activity('" + username + "', '" + name + "', '" + city + "', '" + currentActivity.Activity + "')";
+        ask(query);
+        listCount++;
+        getLists();
+    }
     closePopup();
     //window.location.reload()
 }
@@ -407,7 +413,6 @@ function openAddListPopup(){
 function openAddTripPopup(){
     clicked = true;
     addTripPopup.style.display = "block";
-    
 }
 
 function getLists(){

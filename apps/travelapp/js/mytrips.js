@@ -8,6 +8,7 @@ var adding = false;
 var listName;
 
 var resultID = 0;
+var clicked = false;
 
 var colors = ["#feb55b","#febc6b","#fec47c","#fecb8c","#fed39d","#ffdaad","#ffe1bd","#ffe9ce","#57cae9","#68cfeb","#79d5ed","#89daf0","#9adff2","#abe5f4","#bceaf6","#bceaf6","#cdeff8"];
 
@@ -63,14 +64,16 @@ function showResults(y){
     div.style.backgroundColor = color;
     var name = document.createTextNode(y[0].ListName);
 
-    mainDiv.onclick = function(){
-        listName = sessionStorage.setItem("listName", y[0].ListName);
-        window.open("mytrip.html?name=" + y[0].ListName, "_self");
-    }
-
     var button = document.createElement("button");
     button.innerHTML = "<img src='./assets/images/delete.svg'></img>";
     button.onclick = deleteList;
+
+    mainDiv.onclick = function(){
+        if(!clicked){
+            listName = sessionStorage.setItem("listName", y[0].ListName);
+            window.open("mytrip.html?name=" + y[0].ListName, "_self");
+        }
+    }
     
     h4.appendChild(name);
     trips.appendChild(mainDiv);
@@ -132,6 +135,7 @@ function deleteList(){
     var query = "remove_list('" + username + "', '" + name + "')";
     askQ(query);
     window.location.reload();
+    clicked = true;
 }
 
 window.onclick = function(event) {

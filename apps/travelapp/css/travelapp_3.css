@@ -191,13 +191,22 @@ a:hover {
     text-decoration: #57CAE9 underline 2px;
 }
 
-#login_message, #register_message{
+#login_message{
     color: #FF414D;
     font-weight: 600;
     font-size: 12px;    
     position: absolute;
     right: 45%;
     top: 59.5%;
+}
+
+#register_message{
+    color: #FF414D;
+    font-weight: 600;
+    font-size: 12px;    
+    position: absolute;
+    right: 46.2%;
+    top: 63%;
 }
 
 .register_form{

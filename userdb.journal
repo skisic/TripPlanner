@@ -99,3 +99,51 @@ assert(trip_activity(sara,'Dubrovnik Trip 2021','Dubrovnik','Blue Cave Boat Tour
 assert(trip_activity(sara,'Dubrovnik Trip 2021','Dubrovnik','Sea Kayaking and Snorkeling - Dubrovnik Adventure')).
 assert(user_list(sara,'Varazdin Trip 2021')).
 assert(user_list(sara,'My New Trip')).
+retract(trip_activity(sara,'Dubrovnik Trip 2021','Dubrovnik','Sea Kayaking and Snorkeling - Dubrovnik Adventure')).
+assert(trip_activity(sara,'Varazdin Trip 2021','Varazdin','Pansion Maltar')).
+assert(trip_activity(sara,'Varazdin Trip 2021','Varazdin','B&B Arbia Dorka')).
+assert(user(test1,test123,regular)).
+assert(user_list(test1,'Vz')).
+assert(trip_activity(test1,'Vz','Varazdin','Pansion Maltar')).
+retract(trip_activity(test1,'Vz','Varazdin','Pansion Maltar')).
+retract(user_list(test1,'Vz')).
+assert(user_list(test1,db)).
+assert(trip_activity(test1,db,'Dubrovnik','Hotel Adria')).
+retract(user_list(test1,db)).
+assert(user_list(test1,sa)).
+assert(user_list(test1,'12')).
+assert(user_list(test1,'111')).
+assert(user_list(test1,'123')).
+retract(user_list(test1,sa)).
+retract(user_list(test1,'12')).
+retract(user_list(test1,'111')).
+assert(trip_activity(test1,'123','Varazdin','B&B Arbia Dorka')).
+assert(trip_activity(test1,'123','Varazdin','Hotel Istra')).
+retract(trip_activity(test1,'123','Varazdin','Hotel Istra')).
+retract(user_list(test1,'123')).
+assert(user_list(test1,hi)).
+retract(user_list(test1,hi)).
+assert(user_list(test1,sd)).
+retract(user_list(test1,sd)).
+assert(user_list(test1,sdd)).
+assert(trip_activity(test1,sdd,'Varazdin','Hotel Istra')).
+retract(user_list(test1,sdd)).
+assert(user_list(test1,sdsd)).
+retract(user_list(test1,sdsd)).
+assert(trip_activity(test1,sdsdd,'Dubrovnik','Hotel Dubrovnik Palace')).
+assert(user_list(test1,sdsdd)).
+assert(trip_activity(test1,sdsdd,'Varazdin','B&B Arbia Dorka')).
+retract(user_list(test1,sdsdd)).
+assert(user_list(test1,sdsa)).
+assert(trip_activity(test1,sdsa,'Varazdin','Hotel Istra')).
+retract(user_list(test1,sdsa)).
+assert(user_list(test1,saw)).
+assert(trip_activity(test1,saw,'Dubrovnik','Hotel Adria')).
+retract(user_list(test1,saw)).
+assert(user_list(test1,awe)).
+assert(trip_activity(test1,awe,'Dubrovnik','Hotel Adria')).
+assert(trip_activity(test1,awe,'Dubrovnik','Hotel Dubrovnik Palace')).
+retract(user_list(test1,awe)).
+assert(user_list(test1,weew)).
+assert(trip_activity(test1,weew,'Dubrovnik','Hotel Adria')).
+retract(user_list(test1,weew)).
